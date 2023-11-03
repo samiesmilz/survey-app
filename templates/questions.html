@@ -1,0 +1,26 @@
+{% extends 'baselet.html' %} {% block title %} Survey Ops {% endblock %} {%
+block logo %} [ SURVEY OPS ] {% endblock %} {% block content %}
+
+<p class="subtitle">Improving your experince through real feedback.</p>
+
+<div id="question-div">
+  <h2 id="survey-title">{{survey}}:</h2>
+  <form action="/answer?id={{question_id}}" method="POST">
+    <label id="question-label" for="answer" class="question-info"
+      >{{question_id + 1}}: {{question}}</label
+    >
+    <div id="qsn-input-btn-div">
+      <input
+        id="answer-input"
+        name="answer"
+        class="question-info"
+        type="text"
+        placeholder=" Enter your answer here..."
+        alt="answer to question"
+      />
+      <button id="submit-answer-btn" class="question-info">submit</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

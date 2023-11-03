@@ -1,0 +1,17 @@
+{% extends 'baselet.html' %} {% block title %} Survey Ops {% endblock %} {%
+block logo %} [ SURVEY OPS ] {% endblock %} {% block content %}
+
+<p class="subtitle">Improving your experince through real feedback.</p>
+<div class="thank-you-div">
+  <h1 id="conragts">Congratulations!</h1>
+  <h2>You have completed the survey!</h2>
+  <h2>Thank you for your feedback</h2>
+</div>
+<div id="complete-survey">
+  {% for (qsn, answer) in response_dict.items() %}
+  <div id="final-qn-ans-div">
+    <p id="final-qn-ans">{{qsn}} - <span id="ans-span">{{answer}}</span></p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

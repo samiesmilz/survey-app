@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@200&family=Montserrat:wght@200&family=Roboto+Condensed&display=swap");
+
+/* Reset and general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: beige;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+#contact-us-btn {
+  background-color: aquamarine;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+#logo {
+  color: white;
+  padding: 0 15px;
+  font-family: "Fjalla One", sans-serif;
+}
+
+/* Container styles */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.big-title {
+  font-size: 6.5rem;
+}
+
+.subtitle {
+  font-size: 5rem;
+}
+
+.survey_details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  align-items: center;
+}
+
+.start-button-div {
+  padding: 15px;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+#survey-title {
+  background-color: aquamarine;
+  padding: 10px;
+}
+#answer-input {
+  outline-color: aquamarine;
+}
+#survey-intro {
+  font-size: 1.5rem;
+  padding: 15px;
+}
+#survey-type {
+  padding: 5px 35px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.survey-info {
+  font-size: 1.7rem;
+  color: black;
+}
+.survey-instructions {
+  font-size: 2rem;
+  color: black;
+}
+.start-button {
+  margin-top: 1px;
+  padding: 5px 40px;
+  font-size: 2rem;
+  width: auto;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+.start-button:hover {
+  background-color: beige;
+  color: black;
+}
+
+/* Questions styles */
+#question-label {
+  display: inline-block;
+  font-size: 2.2rem;
+  padding: 15px 5px;
+}
+
+#answer-input {
+  width: 50%;
+  outline-color: aquamarine;
+}
+#question-div {
+  text-align: center;
+  margin: 35px 0;
+}
+.question-info {
+  font-size: 2rem;
+  padding: 10px;
+  margin: 15px 0;
+}
+.flash {
+  text-align: center;
+  padding: 15px;
+}
+
+#submit-answer-btn {
+  width: 40%;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+#submit-answer-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 15px;
+}
+
+/*  Thank you page  */
+.thank-you-div {
+  display: grid;
+  gap: 5px;
+  background-color: black;
+  color: white;
+  padding: 35px 15px;
+}
+
+#conragts {
+  color: aquamarine;
+}
+#final-qn-ans-div {
+  margin-bottom: 2px;
+  background-color: rgba(127, 255, 212, 0.62);
+}
+#final-qn-ans {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+#ans-span {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: blueviolet;
+}
+
+/* Add media queries for responsive design as needed */
+@media (max-width: 850px) {
+  #question-label {
+    display: block;
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 2250px) {
+  .big-title {
+    font-size: 8rem;
+    font-weight: bolder;
+    text-align: left;
+  }
+  .subtitle {
+    font-size: 5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1500px) {
+  .big-title {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: left;
+  }
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 515px) {
+  header nav a {
+    font-size: 13px;
+  }
+  footer {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 2360px) {
+  /* .big-title {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: left;
+  } */
+  .subtitle {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 25px 5px;
+  }
+}
+
+@media (max-width: 1828px) {
+  /* .big-title {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: left;
+  } */
+  .subtitle {
+    font-size: 3rem;
+  }
+
+  /* #question-label {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+  #answer-input {
+    width: 100%;
+    margin: 0px;
+    font-size: 1.7rem;
+  } */
+}
+
+@media (max-width: 615px) {
+  #survey-intro {
+    font-size: 1rem;
+  }
+
+  .survey-info {
+    font-size: 1.35rem;
+    color: black;
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
+  #survey-type {
+    padding: 5px 35px;
+    font-size: 1.5rem;
+    outline-color: aquamarine;
+  }
+  .start-button {
+    margin-top: 1px;
+    padding: 5px 41.5px;
+    font-size: 1.5rem;
+    width: auto;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+    cursor: pointer;
+  }
+  .survey-instructions {
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    padding-left: 25px;
+    border: 1px dotted aquamarine;
+    border-radius: 10px;
+    background-color: aliceblue;
+  }
+  .subtitle {
+    text-align: left;
+  }
+  #question-label {
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+  #answer-input {
+    width: 100%;
+    margin: 0px;
+    font-size: 1.7rem;
+  }
+  #submit-answer-btn {
+    width: 100%;
+    background-color: aquamarine;
+    border-radius: 5px;
+  }
+  #submit-answer-btn:hover {
+    background-color: black;
+    color: white;
+  }
+}

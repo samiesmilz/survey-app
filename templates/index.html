@@ -1,0 +1,29 @@
+{% extends 'baselet.html' %} {% block title %} Survey Ops {% endblock %} {%
+block logo %} [ SURVEY OPS ] {% endblock %} {% block content %}
+
+<!-- <h1 class="big-title">WELCOME TO SURVEY OPS</h1> -->
+<p class="subtitle">Improving your experince through real feedback.</p>
+
+<div class="survey_details">
+  <div>
+    <h2 id="survey-intro">
+      Get started by choosing a survey and follow the instructions as shown
+      below:
+    </h2>
+  </div>
+  <div class="start-button-div">
+    <form action="/questions/0" method="POST">
+      <label for="survey" class="survey-info">Select survey type : </label>
+      <select name="survey" id="survey-type">
+        <option value="personality_quiz">Personality</option>
+        <option value="satisfaction_survey">Satisfaction</option>
+      </select>
+      <button class="start-button">Start survey</button>
+    </form>
+  </div>
+</div>
+<p class="survey-instructions">
+  <strong>Instructions:</strong> {{instructions}}
+</p>
+
+{% endblock %}
