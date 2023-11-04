@@ -1,0 +1,36 @@
+{% extends 'baselet.html' %} {% block title %} Survey Ops {% endblock %} {%
+block logo %} [ COOKIE OPS ] {% endblock %} {% block content %}
+
+<p class="subtitle">Your stored cookies and session data.</p>
+<div id="complete-survey">
+  <div id="final-qn-ans-div">
+    <p id="final-qn-ans">
+      So - Your fav color is - <span id="ans-span">{{fav_color}}!</span>
+    </p>
+  </div>
+</div>
+{# For demo purposes, show our cookies #} {% if request.cookies %}
+
+<div>
+  <h2 class="state-data-title">Flask Cookies</h2>
+  {% for name, value in request.cookies.items() %}
+  <div class="state-item-div">
+    <p class="state-item">
+      {{ name }} = <span class="state-value-span">"{{ value }}"</span>
+    </p>
+  </div>
+  {% endfor %}
+</div>
+<div>
+  <h2 class="state-data-title">Flask Session [ Key/val ]</h2>
+  {% endif %} {% if session %} {% for name, value in session.items() %}
+  <div class="state-item-div">
+    <p class="state-item">
+      {{ name }} = <span class="state-value-span">"{{ value }}"</span>
+    </p>
+  </div>
+  {% endfor %} {% endif %}
+  <h2 class="state-data-title">Flask Session Object</h2>
+  {{session}}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'baselet.html' %} {% block title %} Survey Ops {% endblock %} {%
+block logo %} [ COOKIE OPS ] {% endblock %} {% block content %}
+
+<p class="subtitle">Ready to make some cookies</p>
+<div class="thank-you-div">
+  <h1 id="conragts">Add your cookies here.</h1>
+  <form action="/cookies">
+    <label for="cookie_name">What's your fav color :</label>
+    <input
+      type="text"
+      name="cookie_name"
+      placeholder="Enter your fav color..."
+    />
+    <input type="submit" />
+  </form>
+</div>
+{% endblock %}

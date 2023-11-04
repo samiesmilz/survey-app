@@ -14,4 +14,18 @@ block logo %} [ SURVEY OPS ] {% endblock %} {% block content %}
   </div>
   {% endfor %}
 </div>
+<h3>Session Retrived Responses</h3>
+<p id="final-qn-ans">
+  <span id="ans-span">{{session["user_reponses"]}}</span>
+</p>
+<div id="complete-survey">
+  {% for item in session["user_reponses"] %}
+  <div id="final-qn-ans-div">
+    <p id="final-qn-ans">
+      Question {{session["user_responses"].index(item)}}: -
+      <span id="ans-span">{{item}}</span>
+    </p>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

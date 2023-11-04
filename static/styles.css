@@ -106,6 +106,7 @@ a {
   padding: 5px 35px;
   font-size: 2rem;
   cursor: pointer;
+  width: auto;
 }
 .survey-info {
   font-size: 1.7rem;
@@ -190,12 +191,28 @@ footer {
   padding: 5px;
   font-size: 1.2rem;
 }
+
 #ans-span {
   font-weight: bold;
   text-transform: capitalize;
   color: blueviolet;
 }
 
+.state-data-title {
+  padding: 10px 2px;
+}
+.state-item {
+  padding: 5px 5px;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+  background-color: rgba(127, 255, 212, 0.62);
+}
+.state-value-span {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: blueviolet;
+  font-size: smaller;
+}
 /* Add media queries for responsive design as needed */
 @media (max-width: 850px) {
   #question-label {

@@ -14,11 +14,13 @@ block logo %} [ SURVEY OPS ] {% endblock %} {% block content %}
   <div class="start-button-div">
     <form action="/questions/0" method="POST">
       <label for="survey" class="survey-info">Select survey type : </label>
-      <select name="survey" id="survey-type">
-        <option value="personality_quiz">Personality</option>
-        <option value="satisfaction_survey">Satisfaction</option>
-      </select>
-      <button class="start-button">Start survey</button>
+      <div>
+        <select name="survey" id="survey-type">
+          <option value="personality_quiz">Personality</option>
+          <option value="satisfaction_survey">Satisfaction</option>
+        </select>
+        <button class="start-button">Start survey</button>
+      </div>
     </form>
   </div>
 </div>
